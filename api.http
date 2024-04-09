@@ -1,0 +1,33 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "ConnecTech",
+  "details": "Semana da computação",
+  "maximumAttendees": 100
+}
+
+###
+
+POST http://localhost:3333/events/81a3f6db-45bf-4a6f-b10c-bcaf8837ac43/attendees
+Content-Type: application/json
+
+{
+  "name": "Diego Sants",
+  "email": "diegosants@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/81a3f6db-45bf-4a6f-b10c-bcaf8837ac43
+
+###
+
+GET http://localhost:3333/attendees/2/badge
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/81a3f6db-45bf-4a6f-b10c-bcaf8837ac43/attendees?query=diego
